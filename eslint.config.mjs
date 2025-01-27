@@ -15,10 +15,10 @@ const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   {
     plugins: {
-      prettier: prettierPlugin, // Aggiungi il plugin Prettier
+      prettier: prettierPlugin,
     },
     rules: {
-      'prettier/prettier': 'error', // Abilita le regole di Prettier come errori
+      'prettier/prettier': 'error',
     },
   },
   prettierConfig,

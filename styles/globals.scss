@@ -1,4 +1,8 @@
 //- tailwindcss
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@forward 'tailwindcss/base';
+@forward 'tailwindcss/components';
+@forward 'tailwindcss/utilities';
+
+// - Outher style
+@forward '_generic';
+@forward 'elements';

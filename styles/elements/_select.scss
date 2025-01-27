@@ -1,0 +1,31 @@
+@use '@/styles/variables.module' as *;
+@use '@/styles/functions' as *;
+
+.select {
+  padding: um(26) um(12) um(14) um(12);
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid $ghost;
+
+  & ~ .label {
+    position: absolute;
+    color: $dove-gray;
+    font-size: 12px;
+    top: 0;
+    left: 0;
+    padding: um(4) um(12);
+    height: 100%;
+    pointer-events: none;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:focus {
+    color: $dove-gray;
+    background-color: $white;
+    border-color: $chardonnay;
+    outline: 0;
+    box-shadow: 0 0 0 6px rgba(254, 161, 22, 0.25);
+  }
+}

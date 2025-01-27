@@ -1,0 +1,33 @@
+@use '@/styles/functions' as *;
+@use '@/styles/variables.module' as *;
+
+.icon {
+  display: inline-block;
+  width: calc(um(18) + 1.5vw);
+  height: calc(um(18) + 1.5vh);
+  font-size: calc(um(18) + 1.5vh);
+
+  &.xs {
+    width: um(18);
+    height: um(18);
+    font-size: um(18);
+  }
+
+  &.md {
+    width: calc(um(24) + 1.5vw);
+    height: calc(um(24) + 1.5vw);
+    font-size: calc(um(24) + 1.5vh);
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    width: calc(um(24) + 1.5vw);
+    height: calc(um(24) + 1.5vh);
+
+    &.md {
+      width: calc(um(28) + 1.5vw);
+      height: calc(um(28) + 1.5vw);
+    }
+  }
+}

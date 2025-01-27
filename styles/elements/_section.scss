@@ -1,0 +1,46 @@
+@use '@/styles/variables.module' as *;
+
+.section {
+  &-title {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 um(16);
+    width: fit-content;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 2px;
+      top: 50%;
+      margin-top: -1px;
+      background: $primary;
+    }
+
+    &::before {
+      right: -55px;
+    }
+    &::after {
+      left: -55px;
+    }
+
+    &.left-none {
+      margin: 0;
+
+      &::after {
+        height: 0;
+        width: 0;
+      }
+    }
+
+    &.right-none {
+      margin: 0;
+
+      &::before {
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+}

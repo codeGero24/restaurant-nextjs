@@ -1,0 +1,17 @@
+@use '@/styles/functions' as *;
+@use '@/styles/variables.module' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-weight: 500;
+  background-color: $primary;
+  border-radius: um(2);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

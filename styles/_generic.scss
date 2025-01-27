@@ -1,0 +1,82 @@
+@use 'functions' as *;
+@use 'variables.module' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --color-primary: $primary;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: $weight-normal;
+  line-height: 1.5;
+  color: $dove-gray;
+  background-color: $light;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: '--font-nunito-sans';
+  font-weight: $weight-xl;
+  line-height: 1.2;
+  color: $dark;
+}
+
+h1 {
+  font-size: calc(um(22) + 1.5vw);
+
+  &.xl {
+    font-size: calc(um(22) + 3.3vw);
+  }
+}
+h2 {
+  font-size: calc(um(22) + 0.9vw);
+}
+h3 {
+  font-size: calc(um(22) + 0.6vw);
+}
+h4 {
+  font-size: calc(um(22) + 0.3vw);
+}
+h5 {
+  font-size: um(20);
+}
+h6 {
+  font-size: um(16);
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: um(40);
+  }
+  h2 {
+    font-size: um(32);
+  }
+  h3 {
+    font-size: um(28);
+  }
+  h4 {
+    font-size: um(24);
+  }
+}

@@ -1,0 +1,41 @@
+@use '@/styles/variables.module' as *;
+@use '@/styles/functions' as *;
+
+.textarea {
+  padding: um(24) um(12) um(48);
+  width: 100%;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid $ghost;
+
+  & ~ .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    padding: um(20) um(12);
+    pointer-events: none;
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:focus {
+    color: $dove-gray;
+    background-color: $white;
+    border-color: $chardonnay;
+    outline: 0;
+    box-shadow: 0 0 0 6px rgba(254, 161, 22, 0.25);
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    & + .label {
+      opacity: 1;
+      padding: um(4) um(12);
+      font-size: 12px;
+    }
+  }
+}

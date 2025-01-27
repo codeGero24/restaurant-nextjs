@@ -1,0 +1,5 @@
+@use 'functions' ;
+
+.custom-delay {
+  @include animation-delay(4);
+}

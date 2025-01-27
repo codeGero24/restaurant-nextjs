@@ -1,0 +1,53 @@
+@use '@/styles/functions' as *;
+@use '@/styles/variables.module' as *;
+
+.input {
+  padding: um(26) um(12) um(14) um(12);
+  width: 100%;
+  border-radius: 4px;
+  background-color: $white;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid $ghost;
+
+  & + .label {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    padding: um(4) um(12);
+    font-size: 12px;
+    height: 100%;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &:placeholder-shown + .label {
+    opacity: 0;
+  }
+
+  &:placeholder-shown {
+    padding: um(22) um(12);
+  }
+
+  &[type='date'] + .label,
+  &[type='datetime-local'] + .label {
+    opacity: 0;
+  }
+
+  &[type='date']:focus,
+  &[type='datetime-local']:focus {
+    & + .label {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    color: $dove-gray;
+    background-color: $white;
+    border-color: $chardonnay;
+    outline: 0;
+    box-shadow: 0 0 0 6px rgba(254, 161, 22, 0.25);
+  }
+}

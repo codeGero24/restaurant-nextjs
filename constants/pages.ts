@@ -1,6 +1,6 @@
-import { path } from '@/types/constants';
+import { page } from '@/types/constants';
 
-export const PATHS: path[] = [
+export const PAGES: page[] = [
   {
     path: '/',
     name: 'Home',

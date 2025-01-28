@@ -1,7 +1,9 @@
+import { IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
+
 // --------------------
-// - Type path
+// - Type page
 // --------------------
-export type path = {
+export type page = {
   path: string;
   name: string;
   title: string;
@@ -10,10 +12,18 @@ export type path = {
 };
 
 // --------------------
+// - Type icon
+// --------------------
+export type icon = {
+  name: IconName;
+  prefix?: IconPrefix;
+};
+
+// --------------------
 // - Type social
 // --------------------
 export type social = {
   name: string;
-  icon: iconType;
+  icon: icon;
   link: string;
 };

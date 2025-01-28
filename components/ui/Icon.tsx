@@ -1,53 +1,33 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import * as solidIcons from '@fortawesome/free-solid-svg-icons';
-import * as regularIcons from '@fortawesome/free-regular-svg-icons';
-import * as brandIcons from '@fortawesome/free-brands-svg-icons';
+import { IconPrefix, IconName, library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-type ExtractIconNames<T extends Record<string, IconDefinition>> =
-  keyof T extends `fa${infer Name}` ? Name : never;
+import { solidIcons, brandIcons } from '@/constants/icons';
 
-type SolidIconNames = ExtractIconNames<{
-  [K in keyof typeof solidIcons as K extends `fa${string}` ? K : never]: IconDefinition;
-}>;
-type RegularIconNames = ExtractIconNames<{
-  [K in keyof typeof regularIcons as K extends `fa${string}` ? K : never]: IconDefinition;
-}>;
-type BrandIconNames = ExtractIconNames<{
-  [K in keyof typeof brandIcons as K extends `fa${string}` ? K : never]: IconDefinition;
-}>;
+library.add(...solidIcons, ...brandIcons);
 
-type IconName = SolidIconNames | RegularIconNames | BrandIconNames;
-
-interface IconProps {
+// Aggiorna il tipo delle props per supportare la libreria
+interface IconProps extends Omit<FontAwesomeIconProps, 'icon'> {
   name: IconName;
-  type?: 'solid' | 'regular' | 'brand';
-  className?: string;
-  size?: 'xs' | 'sm' | 'lg' | 'xl' | '2x' | '3x';
-  spin?: boolean;
-  pulse?: boolean;
-  rotate?: 90 | 180 | 270;
-  flip?: 'horizontal' | 'vertical' | 'both';
+  prefix?: IconPrefix;
 }
 
-const iconLibraries = {
-  solid: solidIcons,
-  regular: regularIcons,
-  brand: brandIcons,
+// Componente Icon
+const Icon = ({ name, prefix = 'fas', ...props }: IconProps) => {
+  const getIcon = (iconName: IconName, prefix: IconPrefix): [IconPrefix, IconName] => {
+    switch (prefix) {
+      case 'fas':
+      case 'far':
+      case 'fab':
+        return [prefix, iconName];
+      default:
+        throw new Error(
+          `Icon - prefix:${prefix}; Name: ${iconName}; not found in the library`
+        );
+    }
+  };
+
+  const [prefixFinal, nameFinal] = getIcon(name, prefix);
+
+  return <FontAwesomeIcon icon={[prefixFinal, nameFinal]} {...props} />;
 };
-
-const Icon: React.FC<IconProps> = ({ name, type = 'solid', ...props }) => {
-  const iconLibrary = iconLibraries[type];
-  const iconName = `fa${name}` as keyof typeof iconLibrary;
-  const icon = iconLibrary[iconName];
-
-  if (!icon) {
-    console.error(`Icon "${name}" not found in ${type} library.`);
-    return null;
-  }
-
-  return <FontAwesomeIcon icon={icon as IconDefinition} {...props} />;
-};
-
 export default Icon;

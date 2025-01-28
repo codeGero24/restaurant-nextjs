@@ -17,7 +17,7 @@ export default function Footer() {
           className='capitalize transition-all duration-500 hover:tracking-[1px]'
         >
           <Link href={item.link}>
-            <Icon name='ChevronRight' className='icon xs mr-2' />
+            <Icon name='chevron-right' className='icon xs mr-2' />
             {item.name}
           </Link>
         </li>
@@ -30,7 +30,7 @@ export default function Footer() {
       <>
         {CONTANCT.links.map(link => (
           <li key={link.id}>
-            <Icon name={link.icon.name} type='solid' className='icon xs mr-2' />
+            <Icon {...link.icon} className='icon xs mr-2' />
             {link.description}
           </li>
         ))}
@@ -43,7 +43,7 @@ export default function Footer() {
               key={`social-${social.name}`}
               className='flex h-[36px] w-[36px] items-center justify-center rounded-[50%] border-[1px] border-white p-[4px] transition-all hover:bg-white hover:text-primary'
             >
-              <Icon name={social.icon.name} type='brand' className='icon xs' />
+              <Icon {...social.icon} type='brand' className='icon xs' />
             </a>
           ))}
         </li>

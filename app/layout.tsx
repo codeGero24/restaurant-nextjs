@@ -1,18 +1,13 @@
+import React from 'react';
 import type { Metadata } from 'next';
-import { Heebo, Nunito, Nunito_Sans, Pacifico } from 'next/font/google';
-import '@/styles/globals.scss';
+import { Heebo, Nunito, Pacifico } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+import '@/styles/globals.scss';
+
 const nunito = Nunito({
   variable: '--font-nunito',
-  style: 'normal',
-  weight: '800',
-  subsets: ['latin'],
-});
-
-const nunitoSans = Nunito_Sans({
-  variable: '--font-nunito-sans',
   style: 'normal',
   weight: '800',
   subsets: ['latin'],
@@ -38,15 +33,14 @@ export const metadata: Metadata = {
   keywords: 'ristorante, italiano, cucina, pasta, pizza',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='it'>
       <body
-        className={`${nunito.variable} ${nunitoSans.variable} ${heebo.variable} ${pacifico.variable} mx-auto max-w-screen-xl antialiased`}
+        className={`${nunito.variable} ${heebo.variable} ${pacifico.variable} mx-auto max-w-screen-xl antialiased`}
       >
         <Header />
         <main className='min-h-screen'>{children}</main>

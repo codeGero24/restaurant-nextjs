@@ -13,14 +13,15 @@ export const genSocials = (idUser: string | number, socials?: string[]): social[
   socials = socials || defaultSocials;
 
   return socials.map(social => {
-    const iconName = social
+    const socialName = social
       .split('-')
       .map(social => social.charAt(0).toUpperCase() + social.slice(1))
-      .join('');
+      .join(' ');
     return {
-      name: social,
+      name: socialName,
       icon: {
-        name: iconName as social['icon']['name'],
+        name: social as social['icon']['name'],
+        prefix: 'fab',
       },
       link: `https://www.${social}.com/${idUser}`,
     };

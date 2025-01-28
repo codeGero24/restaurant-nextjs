@@ -1,4 +1,5 @@
 import { genSocials } from '@/lib/generate.data';
+import { icon } from '@/types';
 
 export const COMPANY = {
   title: 'Company',
@@ -27,7 +28,7 @@ export const COMPANY = {
 };
 
 const idSocial = 'peoplefirst';
-const socials = ['twitter', 'facebook-f', 'youtube', 'linkedin-in'];
+const socials = ['x-twitter', 'facebook-f', 'youtube', 'linkedin-in'];
 
 export const CONTANCT = {
   title: 'Contact',
@@ -36,21 +37,21 @@ export const CONTANCT = {
       id: 'contact-address',
       description: '123 Street, New York, USA',
       icon: {
-        name: 'MapPin',
+        name: 'location-dot' as icon['name'],
       },
     },
     {
       id: 'contact-phone-number',
       description: '+012 345 67890',
       icon: {
-        name: 'Phone',
+        name: 'phone' as icon['name'],
       },
     },
     {
       id: 'contact-email',
       description: ' info@example.com',
       icon: {
-        name: 'EnvelopeOpen',
+        name: 'envelope-open' as icon['name'],
       },
     },
   ],

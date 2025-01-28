@@ -55,7 +55,7 @@ export default function Footer() {
     <AnimationWrapper
       as='footer'
       animation='animate-fede-in-slow'
-      className='mt-5 bg-dark px-4 pt-12 text-gray-100 lg:px-8'
+      className='bg-dark px-4 pt-12 text-gray-100 lg:px-8'
     >
       <div className='grid grid-cols-1 gap-8 md:grid-cols-4'>
         {/* Company */}

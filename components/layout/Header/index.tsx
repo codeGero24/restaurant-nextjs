@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { clsx } from 'clsx';
-import Logo from '@/components/ui/Logo';
+import Logo from '@/components/Logo';
 import HeroHeader from '@/components/HeroHeader';
 //- import Navbar from '@/components/layout/Navbar';
 

@@ -16,8 +16,7 @@ export default function Loader({ color = 'text-primary', className = '' }: Loade
         className
       )}
     >
-     {/*  <Icon icon='spinner' className={clsx('icon md', color)} spin /> */} */}
-     
+      <Icon name='spinner' className={clsx('icon md', color)} spin />
       <span className='sr-only'>Loading...</span>
     </div>
   );

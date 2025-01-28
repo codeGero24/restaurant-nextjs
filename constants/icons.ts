@@ -1,5 +1,5 @@
 import {
-  faSpider,
+  faSpinner,
   faUtensils,
   faChevronRight,
   faCaretDown,
@@ -27,7 +27,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export const solidIcons = [
-  faSpider,
+  faSpinner,
   faUtensils,
   faChevronRight,
   faCaretDown,

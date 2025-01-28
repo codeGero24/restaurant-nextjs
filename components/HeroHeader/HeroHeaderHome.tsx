@@ -37,7 +37,7 @@ const HeroHeaderHome = React.memo(() => {
       </div>
       <div className='w-4/5 lg:w-[45%]'>
         <Image
-          src='/img/food.png'
+          src='/image/food.png'
           alt='grigliata'
           width={400}
           height={400}

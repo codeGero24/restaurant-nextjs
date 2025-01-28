@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import clsx from 'clsx';
 import { delay } from '@/lib/utils';
+
+import styled from './HeroHeader.module.scss';
 
 interface HeroHeaderProps {
   title?: string;
@@ -20,7 +23,12 @@ const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
   }, [title]);
 
   return (
-    <div className='hero-header mx-auto min-h-[400px] max-w-screen-xl flex-col px-5 py-20 lg:flex-row'>
+    <div
+      className={clsx(
+        styled['hero-header'],
+        'mx-auto min-h-[400px] max-w-screen-xl flex-col px-5 py-20 lg:flex-row'
+      )}
+    >
       <div className='text-center lg:text-left'>
         <h1 className='h1-xl mb-4 font-bold text-white' ref={titleRef}>
           {title}

@@ -1,8 +1,6 @@
 'use client';
 import Link from 'next/link';
 
-// Error boundaries must be Client Components
-
 export default function GlobalError({
   error,
   reset,

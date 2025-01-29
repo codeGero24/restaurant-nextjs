@@ -2,6 +2,7 @@ import Section from '@/components/layout/Section';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
 import CardService from '@/components/ui/Card/Service';
 import AboutUs from '@/components/AboutUs';
+import TeamMembers from '@/components/TeamMembers';
 
 // - Types
 import { service } from '@/types/render.data';
@@ -25,6 +26,8 @@ export default function HomePage() {
       </Section.Root>
       {/* ABOUT US */}
       <AboutUs />
+      {/* TEAM MEMBER */}
+      <TeamMembers />
     </>
   );
 }

@@ -25,6 +25,7 @@ import {
   faLinkedin,
   faLinkedinIn,
   faYoutube,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
 export const solidIcons = [
@@ -54,4 +55,5 @@ export const brandIcons = [
   faLinkedin,
   faLinkedinIn,
   faYoutube,
+  faInstagram,
 ];

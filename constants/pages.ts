@@ -33,7 +33,7 @@ export const PAGES: page[] = [
     group: 'Pages',
   },
   {
-    path: '/team',
+    path: '/our-team',
     name: 'Our Team',
     title: 'Our Team',
     order: 6,

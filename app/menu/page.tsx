@@ -1,10 +1,9 @@
-/* import MenuSection from '@components/MenuSection'; */
+import MenuHighlight from '@/components/MenuHighlight';
 
 export default function MenuPage() {
   return (
     <>
-      <h1>Menu</h1>
-      {/* <MenuSection /> */}
+      <MenuHighlight />
     </>
   );
 }

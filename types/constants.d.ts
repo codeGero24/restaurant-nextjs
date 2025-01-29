@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
-import { IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
+import type { HTMLAttributes } from 'react';
+import type { IconName } from '@fortawesome/free-solid-svg-icons';
 
 // --------------------
 // - Type page
@@ -17,7 +17,6 @@ export type page = {
 // --------------------
 export type icon = {
   name: IconName;
-  prefix?: IconPrefix;
 };
 
 // --------------------

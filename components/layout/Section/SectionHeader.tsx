@@ -1,4 +1,3 @@
-import React from 'react';
 import AnimationWrapper, { AnimationWrapperProps } from '../AnimationWrapper';
 
 interface SectionHeaderProps extends AnimationWrapperProps {
@@ -6,7 +5,7 @@ interface SectionHeaderProps extends AnimationWrapperProps {
   subtitle?: string;
 }
 
-const SectionHeader = React.memo(({ title, subtitle, ...props }: SectionHeaderProps) => {
+export default function SectionHeader({ title, subtitle, ...props }: SectionHeaderProps) {
   const animation = props.animation || 'animate-slide-in-up';
   const duration = props.duration || 'duration-[500ms]';
   const className = props.className || 'pb-12 text-center';
@@ -25,6 +24,4 @@ const SectionHeader = React.memo(({ title, subtitle, ...props }: SectionHeaderPr
       {props.children}
     </AnimationWrapper>
   );
-});
-
-export default SectionHeader;
+}

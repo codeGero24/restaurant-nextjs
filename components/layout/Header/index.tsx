@@ -1,14 +1,13 @@
 'use client';
 
-import React from 'react';
 import { clsx } from 'clsx';
-import Logo from '@/components/Logo';
+import Logo from '@/components/ui/Logo';
 import Navbar from '@/components/layout/Navbar';
 import HeroHeader from '@/components/HeroHeader';
 
 import useScroll from '@/hooks/useScroll';
 
-const Header: React.FC = () => {
+export default function Header() {
   const { isScrolled } = useScroll({ threshold: 50 });
 
   return (
@@ -29,8 +28,4 @@ const Header: React.FC = () => {
       </header>
     </>
   );
-};
-
-Header.displayName = 'Header';
-
-export default Header;
+}

@@ -3,7 +3,7 @@ import CardService from '@/components/ui/Card/Service';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
 
 // - Types
-import { service } from '@/types/render.data';
+import type { service } from '@/types/render.data';
 // - MOCK
 import { SERVICES } from '@/mock/services';
 

@@ -1,17 +1,16 @@
-import React from 'react';
+import Image from 'next/image';
 import { clsx } from 'clsx';
 import Card from '@/components/ui/Card';
 import Icon from '@/components/ui/Icon';
 
 // - Types
-import { member } from '@/types/render.data';
-import Image from 'next/image';
+import type { member } from '@/types/render.data';
 
 interface CardMemberProps {
   member: member;
 }
 
-const CardMember = React.memo(({ member }: CardMemberProps) => {
+export default function CardMember({ member }: CardMemberProps) {
   return (
     <>
       <Card.Root
@@ -43,11 +42,7 @@ const CardMember = React.memo(({ member }: CardMemberProps) => {
                 )}
               >
                 <a href={social.link} target='_blank' rel='noreferrer'>
-                  <Icon
-                    className='icon xs'
-                    prefix={social.icon.prefix}
-                    name={social.icon.name}
-                  />
+                  <Icon className='icon xs' name={social.icon.name} />
                 </a>
               </li>
             ))}
@@ -56,7 +51,4 @@ const CardMember = React.memo(({ member }: CardMemberProps) => {
       </Card.Root>
     </>
   );
-});
-
-CardMember.displayName = 'CardMember';
-export default CardMember;
+}

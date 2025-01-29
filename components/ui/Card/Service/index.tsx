@@ -1,4 +1,3 @@
-import React from 'react';
 import Card, { getStyle } from '@/components/ui/Card';
 import Icon from '@/components/ui/Icon';
 
@@ -9,7 +8,7 @@ interface CardServiceProps {
   service: service;
 }
 
-const CardService = React.memo(({ service }: CardServiceProps) => {
+export default function CardService({ service }: CardServiceProps) {
   return (
     <>
       <Card.Root
@@ -25,8 +24,4 @@ const CardService = React.memo(({ service }: CardServiceProps) => {
       </Card.Root>
     </>
   );
-});
-
-CardService.displayName = 'CardService';
-
-export default CardService;
+}

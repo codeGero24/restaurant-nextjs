@@ -12,7 +12,7 @@ interface TeamMembersProps {
   members?: member[];
 }
 
-const TeamMembers: React.FC<TeamMembersProps> = React.memo(({ members }) => {
+export default function TeamMembers({ members }: TeamMembersProps) {
   const teamMembers = members || MEMBERS;
 
   return (
@@ -28,8 +28,4 @@ const TeamMembers: React.FC<TeamMembersProps> = React.memo(({ members }) => {
       ))}
     </Section.Root>
   );
-});
-
-TeamMembers.displayName = 'TeamMembers';
-
-export default TeamMembers;
+}

@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
 interface BookTableProps {
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 export default function BookTable({ className, children, ...props }: BookTableProps) {
   const text = 'Book A Table';

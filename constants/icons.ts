@@ -1,3 +1,4 @@
+import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import {
   faSpinner,
   faUtensils,
@@ -6,6 +7,7 @@ import {
   faCaretDown,
   faLocationDot,
   faPhone,
+  faEnvelope,
   faEnvelopeOpen,
   faBars,
   faX,
@@ -16,6 +18,7 @@ import {
   faCoffee,
   faPlay,
   faQuoteRight,
+  faPizzaSlice,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -28,32 +31,33 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-export const solidIcons = [
-  faSpinner,
-  faUtensils,
-  faArrowUp,
-  faChevronRight,
-  faCaretDown,
-  faLocationDot,
-  faPhone,
-  faEnvelopeOpen,
-  faBars,
-  faX,
-  faCartPlus,
-  faUserTie,
-  faHeadset,
-  faBurger,
-  faCoffee,
-  faPlay,
-  faQuoteRight,
-];
-export const brandIcons = [
-  faFacebook,
-  faFacebookF,
-  faTwitter,
-  faXTwitter,
-  faLinkedin,
-  faLinkedinIn,
-  faYoutube,
-  faInstagram,
-];
+export const iconsMap = new Map<string, IconDefinition>([
+  ['spinner', faSpinner],
+  ['utensils', faUtensils],
+  ['arrow-up', faArrowUp],
+  ['chevron-right', faChevronRight],
+  ['caret-down', faCaretDown],
+  ['location-dot', faLocationDot],
+  ['phone', faPhone],
+  ['envelope', faEnvelope],
+  ['envelope-open', faEnvelopeOpen],
+  ['bars', faBars],
+  ['x', faX],
+  ['cart-plus', faCartPlus],
+  ['user-tie', faUserTie],
+  ['headset', faHeadset],
+  ['burger', faBurger],
+  ['coffee', faCoffee],
+  ['pizza', faPizzaSlice],
+  ['play', faPlay],
+  ['quoteRight', faQuoteRight],
+  // - Brend Icon
+  ['facebook', faFacebook],
+  ['facebook-f', faFacebookF],
+  ['twitter', faTwitter],
+  ['x-twitter', faXTwitter],
+  ['linkedin', faLinkedin],
+  ['linkedin-in', faLinkedinIn],
+  ['youtube', faYoutube],
+  ['instagram', faInstagram],
+]);

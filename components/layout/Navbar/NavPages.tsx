@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
@@ -8,9 +10,7 @@ import Icon from '@/components/ui/Icon';
 import useDevice from '@/hooks/useDevice';
 
 // - Types
-import { page } from '@/types/constants';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import type { page } from '@/types/constants';
 
 interface NavPagesProps {
   nameGroup: string;

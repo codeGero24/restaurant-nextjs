@@ -17,7 +17,6 @@ export const genSocials = (idUser: string | number, socials?: string[]): social[
       name: socialName,
       icon: {
         name: social as social['icon']['name'],
-        prefix: 'fab',
       },
       link: `https://www.${social}.com/${idUser}`,
     };

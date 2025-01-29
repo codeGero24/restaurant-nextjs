@@ -1,10 +1,11 @@
 'use client';
+
 import React from 'react';
 import { clsx } from 'clsx';
 import { useInView } from 'react-intersection-observer';
 
 // - Types
-import { animation, duration } from '@/types/animation';
+import type { animation, duration } from '@/types/animation';
 
 export interface AnimationWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType;
@@ -16,7 +17,7 @@ export interface AnimationWrapperProps extends React.HTMLAttributes<HTMLDivEleme
   triggerOnce?: boolean;
 }
 
-const AnimationWrapper = ({
+export default function AnimationWrapper({
   className,
   as: TagHtml = 'div',
   animation = 'animate-fede-in-slow',
@@ -25,7 +26,7 @@ const AnimationWrapper = ({
   threshold = 0.1,
   triggerOnce = true,
   ...props
-}: AnimationWrapperProps) => {
+}: AnimationWrapperProps) {
   const { ref, inView } = useInView({
     threshold,
     triggerOnce,
@@ -40,5 +41,4 @@ const AnimationWrapper = ({
       {props.children}
     </TagHtml>
   );
-};
-export default AnimationWrapper;
+}

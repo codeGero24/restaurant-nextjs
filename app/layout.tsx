@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Heebo, Nunito, Pacifico } from 'next/font/google';
 import Header from '@/components/layout/Header';
@@ -35,8 +35,9 @@ export const metadata: Metadata = {
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='it'>

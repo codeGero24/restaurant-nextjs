@@ -3,9 +3,10 @@ import AnimationWrapper from '@/components/layout/AnimationWrapper';
 import CardService from '@/components/ui/Card/Service';
 import AboutUs from '@/components/AboutUs';
 import TeamMembers from '@/components/TeamMembers';
+import MenuHighlight from '@/components/MenuHighlight';
 
 // - Types
-import { service } from '@/types/render.data';
+import type { service } from '@/types/render.data';
 // - Mock
 import { SERVICES } from '@/mock/services';
 
@@ -26,6 +27,8 @@ export default function HomePage() {
       </Section.Root>
       {/* ABOUT US */}
       <AboutUs />
+      {/* MENU */}
+      <MenuHighlight />
       {/* TEAM MEMBER */}
       <TeamMembers />
     </>

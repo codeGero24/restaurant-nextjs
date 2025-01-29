@@ -1,10 +1,10 @@
-import React from 'react';
+import type { ReactNode, ComponentProps } from 'react';
 import dynamic from 'next/dynamic';
 
-interface ButtonProps extends React.ComponentProps<'button'> {
+interface ButtonProps extends ComponentProps<'button'> {
   variant?: 'scroll-up' | 'book-a-table';
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 const ScrollUp = dynamic(() => import('@/components/ui/Button/ScrollUp'));

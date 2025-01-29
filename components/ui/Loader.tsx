@@ -1,6 +1,5 @@
-import React from 'react';
 import { clsx } from 'clsx';
-import Icon from './ui/Icon';
+import Icon from '@/components/ui/Icon';
 
 interface LoaderProps {
   color?: string;

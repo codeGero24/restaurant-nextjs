@@ -62,9 +62,7 @@ export type experience = {
 // --------------------
 export interface menu {
   tabs: tabMenu[];
-  breakfast: plate[];
-  launch: plate[];
-  dinner: plate[];
+  plates: plate[];
 }
 
 // --------------------

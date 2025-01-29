@@ -1,10 +1,11 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
-import Loader from '@/components/Loader';
+import Loader from '@/components/ui/Loader';
 
 // - Types
-import { page } from '@/types/constants';
+import type { page } from '@/types/constants';
+// - Mock
 import { PAGES } from '@/constants';
 
 const HeroHeaderHome = dynamic(() => import('./HeroHeaderHome'), {

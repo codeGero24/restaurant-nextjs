@@ -1,14 +1,13 @@
-import React from 'react';
-import { clsx } from 'clsx';
 import Link from 'next/link';
 import Image from 'next/image';
+import { clsx } from 'clsx';
 import Section from '@/components/layout/Section';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
 import Icon from '@/components/ui/Icon';
 import CardHighlight from '@/components/ui/Card/Highlight';
 
 // - Types
-import { aboutUs } from '@/types/render.data';
+import type { aboutUs } from '@/types/render.data';
 // - Mock
 import { ABOUT } from '@/mock/about';
 
@@ -16,7 +15,7 @@ interface AboutUsProps {
   aboutData?: aboutUs;
 }
 
-const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
+export default function AboutUs({ aboutData }: AboutUsProps) {
   const aboutUs = aboutData || ABOUT;
 
   return (
@@ -85,8 +84,4 @@ const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
       </Section.Content>
     </Section.Root>
   );
-});
-
-AboutUs.displayName = 'AboutUs';
-
-export default AboutUs;
+}

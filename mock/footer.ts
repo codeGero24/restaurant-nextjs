@@ -51,7 +51,7 @@ export const CONTANCT = {
       id: 'contact-email',
       description: ' info@example.com',
       icon: {
-        name: 'envelope-open' as icon['name'],
+        name: 'envelope' as icon['name'],
       },
     },
   ],

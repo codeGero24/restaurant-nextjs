@@ -1,11 +1,45 @@
 import type { Metadata } from 'next';
-import HomePage from '@/components/HomePage';
+import type { service } from '@/types/render.data';
+
+import Section from '@/components/layout/Section';
+import AnimationWrapper from '@/components/layout/AnimationWrapper';
+import CardService from '@/components/ui/Card/Service';
+import AboutUs from '@/components/AboutUs';
+import TeamMembers from '@/components/TeamMembers';
+import MenuHighlight from '@/components/MenuHighlight';
+import Testimonial from '@/components/Testimonial';
+
+// - Mock
+import { SERVICES } from '@/mock/services';
 
 export const metadata: Metadata = {
   title: 'Restoran - Home',
   description: 'Benvenuti a Restoran, il miglior ristorante italiano in città',
 };
 
-export default function Home() {
-  return <HomePage />;
+export default function HomePage() {
+  return (
+    <>
+      {/* SERVICES */}
+      <Section.Root>
+        {SERVICES.map((service: service, index: number) => (
+          <AnimationWrapper
+            key={`service-${index}`}
+            animation='animate-slide-in-up'
+            delay={true}
+          >
+            <CardService service={service} />
+          </AnimationWrapper>
+        ))}
+      </Section.Root>
+      {/* ABOUT US */}
+      <AboutUs />
+      {/* MENU */}
+      <MenuHighlight />
+      {/* TEAM MEMBER */}
+      <TeamMembers />
+      {/* TESTIMONIAL */}
+      <Testimonial />
+    </>
+  );
 }

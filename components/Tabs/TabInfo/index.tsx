@@ -1,5 +1,6 @@
-import { tabInfo } from '@/types';
-import Icon from '../../Icon';
+import type { tabInfo } from '@/types';
+
+import Icon from '@/components/ui/Icon';
 
 interface TabProps {
   tabData: tabInfo;

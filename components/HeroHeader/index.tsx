@@ -1,10 +1,10 @@
+import type { page } from '@/types/constants';
+
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import Loader from '@/components/ui/Loader';
 
-// - Types
-import type { page } from '@/types/constants';
 // - Mock
 import { PAGES } from '@/constants';
 

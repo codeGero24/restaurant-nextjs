@@ -50,7 +50,7 @@ export const iconsMap = new Map<string, IconDefinition>([
   ['coffee', faCoffee],
   ['pizza', faPizzaSlice],
   ['play', faPlay],
-  ['quoteRight', faQuoteRight],
+  ['quote-right', faQuoteRight],
   // - Brend Icon
   ['facebook', faFacebook],
   ['facebook-f', faFacebookF],

@@ -10,8 +10,8 @@ export interface TabsProps<T> {
   className?: string;
 }
 
-const TabInfo = dynamic(() => import('@/components/ui/Tabs/TabInfo'));
-const TabMenu = dynamic(() => import('@/components/ui/Tabs/TabMenu'));
+const TabInfo = dynamic(() => import('@/components/Tabs/TabInfo'));
+const TabMenu = dynamic(() => import('@/components/Tabs/TabMenu'));
 
 export default function Tabs({ className, variant, tabs }: TabsProps<tab>) {
   const classNameCustom = className || 'grid grid-cols-1 md:grid-cols-3';

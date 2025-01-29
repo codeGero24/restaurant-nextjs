@@ -1,4 +1,5 @@
-import React from 'react';
+import type { tabMenu } from '@/types/render.data';
+
 import { clsx } from 'clsx';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
@@ -6,7 +7,6 @@ import Icon from '@/components/ui/Icon';
 // - import useMenuStore from '@stores/menu.store';
 
 // - Types
-import type { tabMenu } from '@/types/render.data';
 
 interface TabProps {
   tabData: tabMenu;

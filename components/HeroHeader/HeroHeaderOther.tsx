@@ -12,7 +12,7 @@ interface HeroHeaderProps {
   name?: string;
 }
 
-const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
+export default function HeroHeaderOther({ title, name }: HeroHeaderProps) {
   const titleRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -48,8 +48,4 @@ const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
       </div>
     </div>
   );
-});
-
-HeroHeaderOther.displayName = 'HeroHeaderOther';
-
-export default HeroHeaderOther;
+}

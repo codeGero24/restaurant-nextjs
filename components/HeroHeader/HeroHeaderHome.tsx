@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import styled from './HeroHeader.module.scss';
 
-const HeroHeaderHome = React.memo(() => {
+export default function HeroHeaderHome() {
   return (
     <div
       className={clsx(
@@ -46,7 +46,4 @@ const HeroHeaderHome = React.memo(() => {
       </div>
     </div>
   );
-});
-
-HeroHeaderHome.displayName = 'HeroHeaderHome';
-export default HeroHeaderHome;
+}

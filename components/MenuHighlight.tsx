@@ -1,7 +1,7 @@
-import Tabs from '@/components/ui/Tabs';
-import CardPlate from '@/components/ui/Card/Plate';
 import Section from '@/components/layout/Section';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
+import CardPlate from '@/components/ui/Card/Plate';
+import Tabs from '@/components/Tabs';
 
 // - import useMenuStore from '@stores/menu.store';
 

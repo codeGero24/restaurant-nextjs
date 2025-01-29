@@ -19,6 +19,7 @@ const eslintConfig = [
     },
     rules: {
       'prettier/prettier': 'error',
+      'import/no-anonymous-default-export': 'off',
     },
   },
   prettierConfig,

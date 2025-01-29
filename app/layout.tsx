@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 import '@/styles/globals.scss';
+import Button from '@/components/ui/Button';
 
 const nunito = Nunito({
   variable: '--font-nunito',
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${nunito.variable} ${heebo.variable} ${pacifico.variable} mx-auto max-w-screen-xl antialiased`}
       >
+        <Button variant='scroll-up' />
         <Header />
         <main className='min-h-screen'>{children}</main>
         <Footer />

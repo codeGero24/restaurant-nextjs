@@ -1,6 +1,7 @@
 import {
   faSpinner,
   faUtensils,
+  faArrowUp,
   faChevronRight,
   faCaretDown,
   faLocationDot,
@@ -9,7 +10,7 @@ import {
   faBars,
   faX,
   faCartPlus,
-  faUserGear,
+  faUserTie,
   faHeadset,
   faBurger,
   faCoffee,
@@ -29,6 +30,7 @@ import {
 export const solidIcons = [
   faSpinner,
   faUtensils,
+  faArrowUp,
   faChevronRight,
   faCaretDown,
   faLocationDot,
@@ -37,7 +39,7 @@ export const solidIcons = [
   faBars,
   faX,
   faCartPlus,
-  faUserGear,
+  faUserTie,
   faHeadset,
   faBurger,
   faCoffee,

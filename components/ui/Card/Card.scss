@@ -1,0 +1,38 @@
+@use '@/styles/variables.module' as *;
+
+.bck-card {
+  transition: all 0.5s ease-in-out;
+
+  .icon {
+    color: $primary;
+  }
+
+  &:hover {
+    .icon {
+      color: $white;
+    }
+  }
+
+  &.hover-none {
+    &:hover {
+      .icon {
+        color: $primary;
+      }
+    }
+  }
+
+  &.is--active {
+    background-color: $primary;
+    color: $white;
+
+    .icon {
+      color: $white !important;
+    }
+
+    &:hover {
+      .icon {
+        color: currentColor;
+      }
+    }
+  }
+}

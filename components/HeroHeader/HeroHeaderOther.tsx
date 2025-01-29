@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -34,7 +35,7 @@ const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
           {title}
         </h1>
         <ul className='flex justify-center gap-2 text-lg text-white'>
-          <li className='cursor-pointer uppercase'>
+          <li className='uppercase'>
             <Link href='/' className='text-primary'>
               Home
             </Link>
@@ -42,7 +43,7 @@ const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
           <li className='font-semibold text-gray-500'>/</li>
           <li className='cursor-pointer uppercase text-primary'>Pages</li>
           <li className='font-semibold text-gray-500'>/</li>
-          <li className='cursor-pointer uppercase'>{name}</li>
+          <li className='uppercase'>{name}</li>
         </ul>
       </div>
     </div>

@@ -1,17 +1,18 @@
 import Section from '@/components/layout/Section';
-import CardService from '@/components/ui/Card/Service';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
+import CardService from '@/components/ui/Card/Service';
 
 // - Types
 import { service } from '@/types/render.data';
-// - MOCK
+// - Mock
 import { SERVICES } from '@/mock/services';
 
-export default function ServicePage() {
+export default function HomePage() {
   return (
     <>
-      <Section.Root title='Services' subtitle='Our Services'>
-        {SERVICES.concat(SERVICES).map((service: service, index: number) => (
+      {/* SERVICES */}
+      <Section.Root>
+        {SERVICES.map((service: service, index: number) => (
           <AnimationWrapper
             key={`service-${index}`}
             animation='animate-slide-in-up'

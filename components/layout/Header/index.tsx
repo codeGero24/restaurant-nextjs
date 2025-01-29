@@ -3,8 +3,8 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import Logo from '@/components/Logo';
+import Navbar from '@/components/layout/Navbar';
 import HeroHeader from '@/components/HeroHeader';
-//- import Navbar from '@/components/layout/Navbar';
 
 import useScroll from '@/hooks/useScroll';
 
@@ -23,6 +23,7 @@ const Header: React.FC = () => {
           )}
         >
           <Logo />
+          <Navbar />
         </div>
         <HeroHeader />
       </header>

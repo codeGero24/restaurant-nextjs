@@ -1,3 +1,4 @@
+import { HTMLAttributes } from 'react';
 import { IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
 
 // --------------------
@@ -20,10 +21,9 @@ export type icon = {
 };
 
 // --------------------
-// - Type social
+// - Interface Img
 // --------------------
-export type social = {
-  name: string;
-  icon: icon;
-  link: string;
-};
+export interface Img extends HTMLAttributes<HTMLImageElement> {
+  src: string;
+  alt: string;
+}

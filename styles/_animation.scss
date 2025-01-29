@@ -1,4 +1,4 @@
-@use 'functions' ;
+@use 'functions' as *;
 
 .custom-delay {
   @include animation-delay(4);

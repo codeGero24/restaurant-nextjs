@@ -1,9 +1,12 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
+
 import { Heebo, Nunito, Pacifico } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
+
+import StoreProvider from '@/store/provider';
 
 import '@/styles/globals.scss';
 
@@ -44,10 +47,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${nunito.variable} ${heebo.variable} ${pacifico.variable} mx-auto max-w-screen-xl antialiased`}
       >
-        <Button variant='scroll-up' />
-        <Header />
-        <main id='l-main'>{children}</main>
-        <Footer />
+        <StoreProvider>
+          <Button variant='scroll-up' />
+          <Header />
+          <main id='l-main'>{children}</main>
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

@@ -25,11 +25,13 @@ export type member = {
 // --------------------
 export type testimonial = {
   id: string | number;
-  review: string;
   name: string;
   profession: string;
+  review: string;
   img: Img;
 };
+
+export type review = testimonial;
 
 // --------------------
 // - type service

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { decrement, increment, reset, selectCount } from '@/store/reducers/counter.slice';
+import { decrement, increment, reset, selectCount } from '@/store/slices/counterSlice';
 // - import { useAppSelector, useAppDispatch } from '@/hooks/redux';
 
 export default function Counter() {

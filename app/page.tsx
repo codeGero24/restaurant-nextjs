@@ -8,10 +8,12 @@ import AboutUs from '@/components/AboutUs';
 import TeamMembers from '@/components/TeamMembers';
 import MenuHighlight from '@/components/MenuHighlight';
 import Testimonial from '@/components/Testimonial';
+import Reservation from '@/components/Reservation';
+
+import envVariables from '@/constants/';
 
 // - Mock
 import { SERVICES } from '@/mock/services';
-import Reservation from '@/components/Reservation';
 
 export const metadata: Metadata = {
   title: 'Restoran - Home',
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  console.log(envVariables);
   return (
     <>
       {/* SERVICES */}

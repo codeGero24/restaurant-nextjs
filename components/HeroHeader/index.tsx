@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import Loader from '@/components/ui/Loader';
 
 // - Mock
-import { PAGES } from '@/constants';
+import { PAGES } from '@/constants/pages';
 
 const HeroHeaderHome = dynamic(() => import('./HeroHeaderHome'), {
   loading: () => <Loader />,

@@ -66,6 +66,8 @@ export type bookingFields = {
 export type headerItem = {
   path: string; //   Es. "home"
   label: string; //  Es. "Home"
+  title?: string;
+  group?: string;
 };
 
 // --------------------------------------

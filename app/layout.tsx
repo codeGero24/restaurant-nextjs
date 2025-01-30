@@ -9,6 +9,7 @@ import Button from '@/components/ui/Button';
 import StoreProvider from '@/providers/Store.provider';
 
 import '@/styles/globals.scss';
+import QueryProvider from '@/providers/Query.provider';
 
 const nunito = Nunito({
   variable: '--font-nunito',
@@ -48,10 +49,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`${nunito.variable} ${heebo.variable} ${pacifico.variable} mx-auto max-w-screen-xl antialiased`}
       >
         <StoreProvider>
-          <Button variant='scroll-up' />
-          <Header />
-          <main id='l-main'>{children}</main>
-          <Footer />
+          <QueryProvider>
+            <Button variant='scroll-up' />
+            <Header />
+            <main id='l-main'>{children}</main>
+            <Footer />
+          </QueryProvider>
         </StoreProvider>
       </body>
     </html>

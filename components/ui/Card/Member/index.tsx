@@ -26,7 +26,7 @@ export default function CardMember({ member }: CardMemberProps) {
             alt={member.img.alt}
             width={252}
             height={252}
-            className='rounded-full aspect-square hover:scale-110 hover:transition-all hover:duration-500 hover:ease-linear'
+            className='aspect-square rounded-full hover:scale-110 hover:transition-all hover:duration-500 hover:ease-linear'
           />
           <Card.Title>{member.name}</Card.Title>
           <Card.Subtitle>{member.role}</Card.Subtitle>

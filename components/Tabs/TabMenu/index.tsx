@@ -29,7 +29,7 @@ export default function TabMenu({ tabData, className }: TabProps) {
       className={clsx('tab-menu', classNameCustom)}
       // - onClick={() => setActiveTab(id)}
     >
-      <Icon className='icon text-primary mr-1' name={nameIcon || 'utensils'} />
+      <Icon className='icon mr-1 text-primary' name={nameIcon || 'utensils'} />
       <div>
         <p>{title}</p>
         <h5>{content}</h5>

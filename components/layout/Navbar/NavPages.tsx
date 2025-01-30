@@ -80,7 +80,7 @@ export default function NavPages({ nameGroup, pagesGroup }: NavPagesProps) {
           <Icon
             name='caret-down'
             className={clsx(
-              'icon xs ml-1 transition-all ease-in-out duration-500',
+              'icon xs ml-1 transition-all duration-500 ease-in-out',
               isOpenPages ? 'rotate-180' : ''
             )}
           />

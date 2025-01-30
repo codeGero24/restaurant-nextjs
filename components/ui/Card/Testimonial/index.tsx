@@ -37,7 +37,7 @@ export default function CardTestimonial({
           alt={img.alt}
           width={54}
           height={54}
-          className='rounded-full aspect-square'
+          className='aspect-square rounded-full'
         />
         <div>
           <h5>{name}</h5>

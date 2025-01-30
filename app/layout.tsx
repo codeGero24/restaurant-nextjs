@@ -6,7 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
 
-import StoreProvider from '@/store/provider';
+import StoreProvider from '@/providers/Store.provider';
 
 import '@/styles/globals.scss';
 

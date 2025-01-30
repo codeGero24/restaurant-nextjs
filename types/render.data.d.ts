@@ -84,7 +84,7 @@ export type plate = {
 // --------------------
 // - type Tab
 // --------------------
-export type tab = tabInfo | tabMenu;
+export type tab = tabInfo & tabMenu;
 
 export type tabInfo = {
   title: string;

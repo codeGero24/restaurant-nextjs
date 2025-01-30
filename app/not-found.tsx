@@ -7,7 +7,7 @@ export default function NotFound() {
         Oops!
       </h1>
       <p className='text-lg'>404 | page not found</p>
-      <Link className=' underline underline-offset-4' href='/'>
+      <Link className='underline underline-offset-4' href='/'>
         Go Home
       </Link>
     </div>

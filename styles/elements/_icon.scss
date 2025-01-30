@@ -24,17 +24,18 @@
     height: calc(um(32) + 1.5vw);
     font-size: calc(um(32) + 1.5vh);
   }
-  
 }
 
 @media (min-width: 1024px) {
   .icon {
     width: calc(um(24) + 1.5vw);
     height: calc(um(24) + 1.5vh);
+    font-size: calc(um(24) + 1.5vh);
 
     &.md {
-      width: calc(um(28) + 1.5vw);
-      height: calc(um(28) + 1.5vw);
+      width: calc(um(26) + 1.5vw);
+      height: calc(um(26) + 1.5vw);
+      font-size: calc(um(26) + 1.5vh);
     }
   }
 }

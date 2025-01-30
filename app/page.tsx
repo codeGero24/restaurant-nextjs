@@ -11,6 +11,7 @@ import Testimonial from '@/components/Testimonial';
 
 // - Mock
 import { SERVICES } from '@/mock/services';
+import Reservation from '@/components/Reservation';
 
 export const metadata: Metadata = {
   title: 'Restoran - Home',
@@ -36,6 +37,8 @@ export default function HomePage() {
       <AboutUs />
       {/* MENU */}
       <MenuHighlight />
+      {/* RESERVATION */}
+      <Reservation />
       {/* TEAM MEMBER */}
       <TeamMembers />
       {/* TESTIMONIAL */}

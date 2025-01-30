@@ -3,7 +3,12 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['themewagon.github.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'themewagon.github.io',
+      },
+    ],
   },
 };
 

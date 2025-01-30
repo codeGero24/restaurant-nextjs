@@ -7,14 +7,12 @@ interface LoaderProps {
 }
 
 export default function Loader({ color = 'text-primary', className = '' }: LoaderProps) {
+  const classNameCustom = clsx(
+    'z-50 flex animate-fede-in items-center justify-center bg-white',
+    className || 'h-screen'
+  );
   return (
-    <div
-      role='status'
-      className={clsx(
-        'flex z-50 h-screen animate-fede-in items-center justify-center bg-white',
-        className
-      )}
-    >
+    <div role='status' className={classNameCustom}>
       <Icon name='spinner' className={clsx('icon md', color)} spin />
       <span className='sr-only'>Loading...</span>
     </div>

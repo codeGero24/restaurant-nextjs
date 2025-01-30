@@ -46,7 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Button variant='scroll-up' />
         <Header />
-        <main className='min-h-screen'>{children}</main>
+        <main id='l-main'>{children}</main>
         <Footer />
       </body>
     </html>

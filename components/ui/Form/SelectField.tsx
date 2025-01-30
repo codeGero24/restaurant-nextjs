@@ -27,7 +27,7 @@ export default function SelectField({ field, className }: SelectFieldProps) {
       <div className={classNameCustom}>
         <select id={field.name} defaultValue={field?.defaultValue} className='select'>
           {field.options?.map(option => (
-            <option key={field.name} value={option.value}>
+            <option key={option.value} value={option.value}>
               {option.label}
             </option>
           ))}

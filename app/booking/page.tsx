@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-/* import Reservation from '@/components/Reservation'; */
+import Reservation from '@/components/Reservation';
 
 export const metadata: Metadata = {
   title: 'Restoran - Booking',
@@ -10,8 +10,7 @@ export const metadata: Metadata = {
 export default function BookingPage() {
   return (
     <>
-      <h1>Booking</h1>
-      {/* <Reservation /> */}
+      <Reservation />
     </>
   );
 }

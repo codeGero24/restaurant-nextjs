@@ -16,7 +16,7 @@ export default function TabInfo({ className, tabData }: TabProps) {
         {title}
       </h5>
       <p>
-        <Icon name='envelope-open' className='icon md' />
+        <Icon name='envelope-open' className='icon xs mr-2 text-primary' />
         {content}
       </p>
     </li>

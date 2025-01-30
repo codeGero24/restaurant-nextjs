@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { Heebo, Nunito, Pacifico } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Button from '@/components/ui/Button';
 
 import '@/styles/globals.scss';
-import Button from '@/components/ui/Button';
 
 const nunito = Nunito({
   variable: '--font-nunito',

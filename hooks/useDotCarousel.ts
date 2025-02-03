@@ -29,7 +29,7 @@ export const useDotCarousel = ({ emblaApi, autoPlayInterval }: useDotCarousel) =
     return () => {
       emblaApi.off('select', onSelect);
     };
-  }, [emblaApi]);
+  }, [emblaApi, onSelect]);
 
   React.useEffect(() => {
     if (!emblaApi || !autoPlayInterval) return;

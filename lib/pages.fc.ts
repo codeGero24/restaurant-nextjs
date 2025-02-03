@@ -1,13 +1,13 @@
-import { page } from '@/types/constants';
+import { route } from '@/types/constants';
 
-export const sortedPagesByOrder = (pages: page[]) =>
+export const sortedPagesByOrder = (pages: route[]) =>
   pages.sort((a, b) => {
     const orderA = a.order || Infinity;
     const orderB = b.order || Infinity;
     return orderA - orderB;
   });
 
-export const groupedPages = (pages: page[]) =>
+export const groupedPages = (pages: route[]) =>
   pages.reduce(
     (acc, page) => {
       const group = page.group || 'ungrouped';
@@ -17,10 +17,10 @@ export const groupedPages = (pages: page[]) =>
       acc[group].push(page);
       return acc;
     },
-    {} as { [key: string]: page[] }
+    {} as { [key: string]: route[] }
   );
 
-export const sortedAndGrouped = (pages: page[]) => {
+export const sortedAndGrouped = (pages: route[]) => {
   const sortedPages = sortedPagesByOrder(pages);
   const groupPages = groupedPages(sortedPages);
   return Object.entries(groupPages);

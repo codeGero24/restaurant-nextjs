@@ -2,15 +2,18 @@ import type { HTMLAttributes } from 'react';
 import type { IconName } from '@fortawesome/free-solid-svg-icons';
 
 // --------------------
-// - Type page
+// - Type route
 // --------------------
-export type page = {
+export type route = {
   path: string;
   name: string;
+  slug: string;
   title: string;
-  group?: string;
-  order?: number;
+  order: number;
+  group?: group;
 };
+
+type group = 'Pages' | 'Contact';
 
 // --------------------
 // - Type icon

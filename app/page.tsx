@@ -10,10 +10,9 @@ import MenuHighlight from '@/components/MenuHighlight';
 import Testimonial from '@/components/Testimonial';
 import Reservation from '@/components/Reservation';
 
-import envVariables from '@/constants/';
-
 // - Mock
 import { SERVICES } from '@/mock/services';
+import Counter from '@/components/Counter';
 
 export const metadata: Metadata = {
   title: 'Restoran - Home',
@@ -21,9 +20,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  console.log(envVariables);
   return (
     <>
+      <Counter />
       {/* SERVICES */}
       <Section.Root>
         {SERVICES.map((service: service, index: number) => (

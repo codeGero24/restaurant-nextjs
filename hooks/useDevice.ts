@@ -3,7 +3,7 @@ import React from 'react';
 const useDevice = (threshold: number = 1024) => {
   const [device, setDevice] = React.useState<string>('');
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < threshold) {
         // - Tablet use mobile layout

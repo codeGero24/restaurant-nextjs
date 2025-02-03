@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import Loader from '@/components/ui/Loader';
 
 const containerStyle = {
   width: '100%',
@@ -31,11 +32,7 @@ export default function Map() {
   }, []);
 
   if (!isLoaded) {
-    return (
-      <div className='flex items-center justify-center bg-white text-gray-500'>
-        Caricamento della mappa...
-      </div>
-    );
+    return <Loader className='h-full' />;
   }
 
   return (

@@ -1,6 +1,6 @@
-import { tab } from '@/types/render.data';
+import { tabInfo } from '@/types/render.data';
 
-export const tabsContact: tab[] = [
+export const tabsContact: tabInfo[] = [
   {
     title: 'Booking',
     content: 'book@example.com',

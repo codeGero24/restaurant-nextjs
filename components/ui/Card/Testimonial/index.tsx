@@ -35,8 +35,8 @@ export default function CardTestimonial({
         <Image
           src={img.src}
           alt={img.alt}
-          width={54}
-          height={54}
+          width={48}
+          height={48}
           className='aspect-square rounded-full'
         />
         <div>

@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import reducers from '@/store/reducers';
+import reducers from '@/store/rootReducer';
 
 export const makeStore = () => {
   return configureStore({

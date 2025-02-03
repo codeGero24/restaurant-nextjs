@@ -1,5 +1,7 @@
 'use client';
 
+import type { route } from '@/types/constants';
+
 import React from 'react';
 import { clsx } from 'clsx';
 import Icon from '@/components/ui/Icon';
@@ -9,13 +11,12 @@ import NavPages from './NavPages';
 import useDevice from '@/hooks/useDevice';
 
 import { sortedAndGrouped } from '@/lib/pages.fc';
-import { PAGES } from '@/constants/pages';
+import router from '@/constants/router';
 
 // - Types
-import { page } from '@/types/constants';
 
 interface NavbarProps {
-  pages?: page[];
+  pages?: route[];
 }
 
 const Navbar = ({ pages }: NavbarProps) => {
@@ -25,7 +26,7 @@ const Navbar = ({ pages }: NavbarProps) => {
   const toggleMenu = React.useCallback(() => setIsOpenMenu(!isOpenMenu), [isOpenMenu]);
 
   const pagesGrouped = React.useMemo(() => {
-    const navPages = pages || PAGES;
+    const navPages = pages || router;
     return sortedAndGrouped(navPages);
   }, [pages]);
 

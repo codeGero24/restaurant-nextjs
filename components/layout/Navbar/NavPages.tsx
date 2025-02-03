@@ -1,5 +1,7 @@
 'use client';
 
+import type { route } from '@/types/constants';
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,12 +11,9 @@ import Icon from '@/components/ui/Icon';
 
 import useDevice from '@/hooks/useDevice';
 
-// - Types
-import type { page } from '@/types/constants';
-
 interface NavPagesProps {
   nameGroup: string;
-  pagesGroup: page[];
+  pagesGroup: route[];
 }
 
 export default function NavPages({ nameGroup, pagesGroup }: NavPagesProps) {

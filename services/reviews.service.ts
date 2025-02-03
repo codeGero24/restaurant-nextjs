@@ -1,3 +1,4 @@
+'use client';
 import type { reviewesResp } from '@/types/api';
 import type { review } from '@/types/render.data';
 

@@ -12,7 +12,6 @@ import Reservation from '@/components/Reservation';
 
 // - Mock
 import { SERVICES } from '@/mock/services';
-import Counter from '@/components/Counter';
 
 export const metadata: Metadata = {
   title: 'Restoran - Home',
@@ -22,7 +21,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Counter />
       {/* SERVICES */}
       <Section.Root>
         {SERVICES.map((service: service, index: number) => (

@@ -1,12 +1,13 @@
+'use client';
+
 import type { tabMenu } from '@/types/render.data';
 
+import React from 'react';
 import { clsx } from 'clsx';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
-
-// - import useMenuStore from '@stores/menu.store';
-
-// - Types
+import { useAppDispatch } from '@/hooks/redux';
+import { setActiveTab } from '@/store/slices/menuSlice';
 
 interface TabProps {
   tabData: tabMenu;
@@ -14,20 +15,20 @@ interface TabProps {
 }
 
 export default function TabMenu({ tabData, className }: TabProps) {
-  // - const { setActiveTab } = useMenuStore();
+  const dispath = useAppDispatch();
+
   const { id, title, content, nameIcon, isActive } = tabData;
 
   const classActive = isActive ? 'border-b-[2px] border-primary' : '';
   const classNameCustom =
     className ||
     clsx('flex gap-2 items-center py-2 mr-2 last:mr-0 lg:mr-12', classActive);
-
   return (
     <Button
       type='button'
       id={id}
       className={clsx('tab-menu', classNameCustom)}
-      // - onClick={() => setActiveTab(id)}
+      onClick={() => dispath(setActiveTab(id))}
     >
       <Icon className='icon mr-1 text-primary' name={nameIcon || 'utensils'} />
       <div>

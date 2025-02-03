@@ -65,6 +65,9 @@ export type experience = {
 export interface menu {
   tabs: tabMenu[];
   plates: plate[];
+  breakfast?: plate[];
+  launch?: plate[];
+  dinner?: plate[];
 }
 
 // --------------------

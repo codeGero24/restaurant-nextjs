@@ -1,16 +1,14 @@
+'use client';
+
 import Section from '@/components/layout/Section';
 import AnimationWrapper from '@/components/layout/AnimationWrapper';
 import CardPlate from '@/components/ui/Card/Plate';
 import Tabs from '@/components/Tabs';
-
-// - import useMenuStore from '@stores/menu.store';
-
-// - Mock
-import { MENU } from '@/mock/menu';
+import { useAppSelector } from '@/hooks/redux';
+import { selectMenu } from '@/store/slices/menuSlice';
 
 export default function MenuHighlight() {
-  // - const { menu } = useMenuStore();
-  const menu = MENU;
+  const { menu } = useAppSelector(selectMenu);
 
   return (
     <Section.Root

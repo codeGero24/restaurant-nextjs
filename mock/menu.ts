@@ -28,4 +28,7 @@ export const TABS: tabMenu[] = [
 export const MENU: menu = {
   tabs: TABS,
   plates: genMenu(8),
+  breakfast: genMenu(8),
+  launch: genMenu(6),
+  dinner: genMenu(4),
 };

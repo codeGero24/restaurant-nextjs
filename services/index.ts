@@ -2,6 +2,7 @@ import axios, { AxiosRequestConfig } from 'axios';
 import { QueryClient, QueryFunction, QueryKey } from '@tanstack/react-query';
 
 import APIs from '@/constants/api';
+
 const instance = axios.create({
   baseURL: APIs.API.main,
   timeout: 10000,
@@ -11,7 +12,6 @@ const instance = axios.create({
 const instance_dummy = axios.create({
   baseURL: APIs.API_DUMMY.main,
   timeout: 10000,
-  maxRedirects: 1,
   headers: { 'Content-Type': 'application/json' },
 });
 
